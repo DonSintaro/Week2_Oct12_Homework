@@ -6,6 +6,7 @@
 html{
     height: 100%;
     box-sizing: border-box;
+    position:relative;
 }
 
 
@@ -29,13 +30,20 @@ h1{
 
 
 .container{
-    max-width: 960px;
+    
     margin-bottom: 50px;
     padding:0;
+}
 
-    
 
 
+.requiredSize{
+    max-width: 960px;
+
+}
+
+.smallerView{
+    visibility: hidden;
 }
 
 .navbar{
@@ -182,9 +190,6 @@ h1{
 
 }
 
-#contentBody{
-    
-}
 
 /*-----------index------------*/
 #profilePic{
@@ -241,7 +246,8 @@ textarea{
 .imgLinks{
     position:relative;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom:0;
+    margin-top:0;
     margin-right: 30px;
     display: inline-block;
 }
@@ -277,32 +283,36 @@ textarea{
 /*--------------footer-----------------*/
 
 #footerArea{
-    height:90px;
-    width:100%; 
+    height: 40px;
 }
 
 #footerTail{
 
     border-top: 8px solid #4aaaa5;
-    
-    position:absolute;
-    bottom:0;
-
-    height: 45px;
-    width:100%; 
+    height: 50px;
+    width: 100%;
     padding-right: 0;
     padding-left: 0;
     background-color: #666666;
-    text-align: center;
     color: white;
-}
+    margin-bottom:0;
+    max-width:100%;
+    
+} 
 
-.smallerView{
-    visibility: hidden;
-}
 
+#sticky-footer {
+    flex-shrink: none;
+    padding:0;
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    
+
+  }
+  
 /*--------------------------------------------*/
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
 
 .scaleDown{
     height: 100%;
@@ -316,7 +326,6 @@ textarea{
 .imgLinks{
     margin-right:0;
     margin-left:0;
-    margin-bottom:0;
     }
 .col-lg-4:nth-child(3n) .imgLinks{
     margin-left: 0px;
@@ -335,7 +344,7 @@ textarea{
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
     .largerView{
         visibility: hidden;
@@ -370,7 +379,7 @@ textarea{
     }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 575px) {
     .imgLinks{
         margin-top:0;
     }
